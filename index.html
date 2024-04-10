@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Exchange - Waiting List</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png"> <!-- Remplacer par le chemin de votre favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #ffe0b2, #ffffff);
+            font-family: 'Open Sans', sans-serif;
+            padding: 40px 0; /* Responsive padding */
+            text-align: center; /* Center align text for the entire body */
+        }
+        .main-content {
+            width: 90%; /* Responsive width */
+            max-width: 800px; /* Max width for larger screens */
+            margin: 0 auto;
+            margin-top: 6rem;
+        }
+        .main-title {
+            font-size: calc(2rem + 1vw); /* Responsive font size for main title */
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .sub-title {
+            font-size: calc(1.2rem + 1vw); /* Smaller responsive font size for sub title */
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .coming-soon {
+            font-style: italic; /* Make coming soon italic */
+            font-size: calc(0.9rem + 1vw); /* Responsive font size */
+            color: #ff6f61; /* Orange color */
+            font-weight: 600;
+            margin: 3rem 0 1rem 0; /* Increased vertical space */
+        }
+        .thankYouMessage {
+            font-style: italic; /* Make thank you message italic */
+        }
+        .email-input, .join-btn {
+            border: 2px solid #ccc; /* Subtle border for less rounded look */
+            padding: 1rem; /* Padding */
+            margin: 0.5rem 0;
+            border-radius: 10px; /* Less rounded corners */
+            text-align: center; /* Centrer le placeholder */
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .email-input {
+            width: calc(40% - 1rem); /* Adjust width for space between */
+        }
+        .join-btn {
+            background-color: #ff6f61;
+            color: white;
+            font-weight: 700;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            width: calc(25% - 1rem); /* Adjust width for space between */
+        }
+        .join-btn:hover {
+            background-color: #ff5f50;
+        }
+        @media (max-width: 640px) {
+            .email-input, .join-btn {
+                width: 90%; /* Full width on smaller screens */
+                margin: 0.5rem auto; /* Center align in the viewport */
+                display: block;
+            }
+            .email-input {
+                margin-bottom: 1rem; /* Space between input and button on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1 class="main-title">GPTExchange.ai</h1>
+        <h2 class="sub-title">Elevate your GPT's potential!</h2>
+        <p class="coming-soon">Coming soon</p>
+        <form id="waitlistForm" action="https://formspree.io/f/mayrlbgj" method="POST">
+            <input type="email" name="email" class="email-input" placeholder="Your email address" required>
+            <button type="submit" class="join-btn">Join waiting list</button>
+        </form>
+        <p id="thankYouMessage" class="hidden thankYouMessage">Thank you for joining! You will hear from us soon.</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
